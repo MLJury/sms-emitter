@@ -1,0 +1,7 @@
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\bin\Kama.SmsService.Core.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\bin\Kama.SmsService.Core.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\Libs\Kama.SmsService.Core.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\Libs\Kama.SmsService.Core.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Core\obj\Debug\Kama.SmsService.Core.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Core\obj\Debug\Kama.SmsService.Core.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Core\obj\Debug\Kama.SmsService.Core.csprojResolveAssemblyReference.cache

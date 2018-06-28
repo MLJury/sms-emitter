@@ -1,0 +1,19 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="$(SolutionDir)Kama.SmsService.Api\Libs\Kama.DatabaseModel.dll" #>
+<#@ assembly name="$(SolutionDir)Kama.SmsService.Api\Libs\Kama.SmsService.Core.Model.dll" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="Kama.DatabaseModel" #>
+<#@ import namespace="Kama.SmsService.Core" #>
+<#@ output extension=".cs" #>
+<#
+	string dataSource = "46.225.116.210",
+		   database = "Kama.SmsService",
+		   username = "kama",
+		   password = "Kama123qwe!@#";
+
+	var generator = new Kama.DatabaseModel.Generator($"Data Source={dataSource};Initial Catalog={database};User ID={username}; Password={password}", "dbo");
+#>
+<#=generator.Generate("Kama.SmsService.Infrastructure.DAL")#>

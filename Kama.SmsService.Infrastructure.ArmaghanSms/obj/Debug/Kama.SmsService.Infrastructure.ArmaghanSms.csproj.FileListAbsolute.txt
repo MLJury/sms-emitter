@@ -1,0 +1,5 @@
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\Libs\Kama.SmsService.Infrastructure.Armaghan.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Api\Libs\Kama.SmsService.Infrastructure.Armaghan.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Infrastructure.ArmaghanSms\obj\Debug\Kama.SmsService.Infrastructure.ArmaghanSms.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Infrastructure.ArmaghanSms\obj\Debug\Kama.SmsService.Infrastructure.Armaghan.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.Infrastructure.ArmaghanSms\obj\Debug\Kama.SmsService.Infrastructure.Armaghan.pdb

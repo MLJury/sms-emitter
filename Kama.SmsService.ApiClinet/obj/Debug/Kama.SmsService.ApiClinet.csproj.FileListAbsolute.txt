@@ -1,0 +1,16 @@
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.SmsService.ApiClinet.dll.config
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.SmsService.ApiClinet.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.SmsService.ApiClinet.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.AppCore.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.Library.ApiClient.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.SmsService.Core.Model.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Newtonsoft.Json.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\System.Net.Http.Formatting.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\System.Web.Http.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Kama.SmsService.Core.Model.pdb
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\Newtonsoft.Json.xml
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\System.Net.Http.Formatting.xml
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\bin\Debug\System.Web.Http.xml
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\obj\Debug\Kama.SmsService.ApiClinet.csprojResolveAssemblyReference.cache
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\obj\Debug\Kama.SmsService.ApiClinet.dll
+H:\Kama.Git\Kama.SmsService\Kama.SmsService.ApiClinet\obj\Debug\Kama.SmsService.ApiClinet.pdb

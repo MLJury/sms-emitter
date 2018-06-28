@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B503E4CB-BFCC-4AD9-8AA2-291F789D7CBA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kama.SmsService.Infrastructure.DAL</RootNamespace>
+    <AssemblyName>Kama.SmsService.Infrastructure.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Kama.SmsService.Api\Libs\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Kama.AppCore">
+      <HintPath>..\Kama.SmsService.Api\Libs\Kama.AppCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Kama.DatabaseModel">
+      <HintPath>..\Kama.SmsService.Api\Libs\Kama.DatabaseModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Kama.SmsService.Core.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Kama.SmsService\bin\Kama.SmsService.Core.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseModel.cs">
+      <DependentUpon>DatabaseModel.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DataSources\AccountDataSource.cs" />
+    <Compile Include="DataSources\ConfigDataSource.cs" />
+    <Compile Include="DataSources\DataSource.cs" />
+    <Compile Include="DataSources\MessageDataSource.cs" />
+    <Compile Include="DataSources\SendTryDataSource.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="LayerRegistrar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kama.SmsService.Core.DataSource\Kama.SmsService.Core.DataSource.csproj">
+      <Project>{bc827d6b-34ca-4fe2-b425-89ce2bff333c}</Project>
+      <Name>Kama.SmsService.Core.DataSource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Kama.SmsService.Core\Kama.SmsService.Core.csproj">
+      <Project>{707bc0d4-f69e-45bd-8c66-ec26c818a54c}</Project>
+      <Name>Kama.SmsService.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DatabaseModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="DatabaseScripts\Create_Schema.sql" />
+    <Content Include="DatabaseScripts\Functions\EmptyGuid.sql" />
+    <Content Include="DatabaseScripts\Procedures\Account\spDeleteAccount.sql" />
+    <Content Include="DatabaseScripts\Procedures\Account\spGetAccounts.sql" />
+    <Content Include="DatabaseScripts\Procedures\Account\spGetAccountsForEnum_.sql" />
+    <Content Include="DatabaseScripts\Procedures\Account\spModifyAccount.sql" />
+    <Content Include="DatabaseScripts\Procedures\Config\spDeleteConfig.sql" />
+    <Content Include="DatabaseScripts\Procedures\Config\spGetConfig.sql" />
+    <Content Include="DatabaseScripts\Procedures\Config\spSetConfig.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\Receiver\spAddTrySendMessage.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\Receiver\spGetUnQueueReceiverMessages.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\Receiver\spSetQueueReceiverMessage.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\Receiver\spSetQueueReceiverMessages.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\Receiver\spSetSendReceiverMessage.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\spAddMessage.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\spAddMessages.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\spDeleteMessage.sql" />
+    <Content Include="DatabaseScripts\Procedures\Message\spGetMessages.sql" />
+    <Content Include="DatabaseScripts\Tables\1-Account.sql" />
+    <Content Include="DatabaseScripts\Tables\1-Config.sql" />
+    <Content Include="DatabaseScripts\Tables\2-Outgoing.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

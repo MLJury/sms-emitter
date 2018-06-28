@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:tns1="urn:SOAPSmsQueue" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://magfa.com/soap/SOAPSmsQueue" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:intf="http://magfa.com/soap/SOAPSmsQueue" targetNamespace="http://magfa.com/soap/SOAPSmsQueue" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:SOAPSmsQueue">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="CustomerReturnIncomingFormat">
+        <xsd:sequence>
+          <xsd:element name="body" nillable="true" type="xsd:string" />
+          <xsd:element name="errorResult" nillable="true" type="xsd:string" />
+          <xsd:element name="recipientNumber" nillable="true" type="xsd:string" />
+          <xsd:element name="senderNumber" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://magfa.com/soap/SOAPSmsQueue">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:complexType name="ArrayOf_xsd_string">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:string[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_int">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:int[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_long">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:long[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="ArrayOf_xsd_anyType">
+        <xsd:complexContent mixed="false">
+          <xsd:restriction base="soapenc:Array">
+            <xsd:attribute wsdl:arrayType="xsd:anyType[]" ref="soapenc:arrayType" />
+          </xsd:restriction>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getMessageIdRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+    <wsdl:part name="checkingMessageId" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getCreditResponse">
+    <wsdl:part name="getCreditReturn" type="xsd:float" />
+  </wsdl:message>
+  <wsdl:message name="getAllMessagesRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+    <wsdl:part name="numberOfMessages" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusesRequest">
+    <wsdl:part name="messagesId" type="intf:ArrayOf_xsd_long" />
+  </wsdl:message>
+  <wsdl:message name="getRealMessageStatusesRequest">
+    <wsdl:part name="messagesId" type="intf:ArrayOf_xsd_long" />
+  </wsdl:message>
+  <wsdl:message name="enqueueWithGatewayRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+    <wsdl:part name="messageBodies" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="recipientNumbers" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="senderNumbers" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="encodings" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="udhs" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="messageClasses" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="priorities" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="checkingMessageIds" type="intf:ArrayOf_xsd_long" />
+    <wsdl:part name="gateway" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getAllMessagesWithNumberResponse">
+    <wsdl:part name="getAllMessagesWithNumberReturn" type="intf:ArrayOf_xsd_anyType" />
+  </wsdl:message>
+  <wsdl:message name="getAllMessagesResponse">
+    <wsdl:part name="getAllMessagesReturn" type="intf:ArrayOf_xsd_anyType" />
+  </wsdl:message>
+  <wsdl:message name="enqueueResponse">
+    <wsdl:part name="enqueueReturn" type="intf:ArrayOf_xsd_long" />
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusesResponse">
+    <wsdl:part name="getMessageStatusesReturn" type="intf:ArrayOf_xsd_int" />
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusRequest">
+    <wsdl:part name="messageId" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getAllMessagesWithNumberRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+    <wsdl:part name="numberOfMessages" type="xsd:int" />
+    <wsdl:part name="destNumber" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="enqueueRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+    <wsdl:part name="messageBodies" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="recipientNumbers" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="senderNumbers" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="encodings" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="udhs" type="intf:ArrayOf_xsd_string" />
+    <wsdl:part name="messageClasses" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="priorities" type="intf:ArrayOf_xsd_int" />
+    <wsdl:part name="checkingMessageIds" type="intf:ArrayOf_xsd_long" />
+  </wsdl:message>
+  <wsdl:message name="getRealMessageStatusesResponse">
+    <wsdl:part name="getRealMessageStatusesReturn" type="intf:ArrayOf_xsd_int" />
+  </wsdl:message>
+  <wsdl:message name="getMessageIdResponse">
+    <wsdl:part name="getMessageIdReturn" type="xsd:long" />
+  </wsdl:message>
+  <wsdl:message name="getCreditRequest">
+    <wsdl:part name="domain" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusResponse">
+    <wsdl:part name="getMessageStatusReturn" type="xsd:int" />
+  </wsdl:message>
+  <wsdl:message name="enqueueWithGatewayResponse">
+    <wsdl:part name="enqueueWithGatewayReturn" type="intf:ArrayOf_xsd_long" />
+  </wsdl:message>
+  <wsdl:portType name="SoapSmsQueuableImplementation">
+    <wsdl:operation name="enqueue" parameterOrder="domain messageBodies recipientNumbers senderNumbers encodings udhs messageClasses priorities checkingMessageIds">
+      <wsdl:input name="enqueueRequest" message="intf:enqueueRequest" />
+      <wsdl:output name="enqueueResponse" message="intf:enqueueResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMessageId" parameterOrder="domain checkingMessageId">
+      <wsdl:input name="getMessageIdRequest" message="intf:getMessageIdRequest" />
+      <wsdl:output name="getMessageIdResponse" message="intf:getMessageIdResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getRealMessageStatuses" parameterOrder="messagesId">
+      <wsdl:input name="getRealMessageStatusesRequest" message="intf:getRealMessageStatusesRequest" />
+      <wsdl:output name="getRealMessageStatusesResponse" message="intf:getRealMessageStatusesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMessagesWithNumber" parameterOrder="domain numberOfMessages destNumber">
+      <wsdl:input name="getAllMessagesWithNumberRequest" message="intf:getAllMessagesWithNumberRequest" />
+      <wsdl:output name="getAllMessagesWithNumberResponse" message="intf:getAllMessagesWithNumberResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getCredit" parameterOrder="domain">
+      <wsdl:input name="getCreditRequest" message="intf:getCreditRequest" />
+      <wsdl:output name="getCreditResponse" message="intf:getCreditResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMessages" parameterOrder="domain numberOfMessages">
+      <wsdl:input name="getAllMessagesRequest" message="intf:getAllMessagesRequest" />
+      <wsdl:output name="getAllMessagesResponse" message="intf:getAllMessagesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="enqueueWithGateway" parameterOrder="domain messageBodies recipientNumbers senderNumbers encodings udhs messageClasses priorities checkingMessageIds gateway">
+      <wsdl:input name="enqueueWithGatewayRequest" message="intf:enqueueWithGatewayRequest" />
+      <wsdl:output name="enqueueWithGatewayResponse" message="intf:enqueueWithGatewayResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatuses" parameterOrder="messagesId">
+      <wsdl:input name="getMessageStatusesRequest" message="intf:getMessageStatusesRequest" />
+      <wsdl:output name="getMessageStatusesResponse" message="intf:getMessageStatusesResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatus" parameterOrder="messageId">
+      <wsdl:input name="getMessageStatusRequest" message="intf:getMessageStatusRequest" />
+      <wsdl:output name="getMessageStatusResponse" message="intf:getMessageStatusResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TSOAPSoapBinding" type="intf:SoapSmsQueuableImplementation">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="enqueue">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="enqueueRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="enqueueResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageId">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMessageIdRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getMessageIdResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRealMessageStatuses">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getRealMessageStatusesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getRealMessageStatusesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMessagesWithNumber">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAllMessagesWithNumberRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getAllMessagesWithNumberResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCredit">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCreditRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getCreditResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMessages">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getAllMessagesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getAllMessagesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enqueueWithGateway">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="enqueueWithGatewayRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="enqueueWithGatewayResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatuses">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMessageStatusesRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getMessageStatusesResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatus">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getMessageStatusRequest">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="getMessageStatusResponse">
+        <wsdlsoap:body use="encoded" namespace="http://magfa.com/soap/SOAPSmsQueue" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SoapSmsQueuableImplementationService">
+    <wsdl:port name="TSOAP" binding="intf:TSOAPSoapBinding">
+      <wsdlsoap:address location="http://sms.magfa.com/services/urn:SOAPSmsQueue" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

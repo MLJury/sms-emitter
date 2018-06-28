@@ -1,0 +1,41 @@
+USE [Kama.SmsService]
+GO
+
+IF OBJECT_ID('pbl.spDeleteConfig') IS NOT NULL
+	DROP PROCEDURE pbl.spDeleteConfig
+GO
+
+CREATE PROCEDURE pbl.spDeleteConfig
+	@AID UNIQUEIDENTIFIER,
+	@AIDs NVARCHAR(MAX) -- ["", ""] lis of id's
+WITH ENCRYPTION 
+AS
+BEGIN
+	SET NOCOUNT, XACT_ABORT ON;
+
+	DECLARE @ID UNIQUEIDENTIFIER = @AID
+		  , @IDs NVARCHAR(MAX) = @AIDs
+		  , @Result INT = 0
+
+	IF @ID = pbl.EmptyGuid()
+		SET @ID = NULL
+
+	BEGIN TRY
+		BEGIN TRAN
+			IF @ID IS NOT NULL
+				DELETE FROM pbl.Config
+				WHERE ID = @ID
+			ELSE
+				DELETE FROM pbl.Config
+				WHERE EXISTS(SELECT 1 FROM OPENJSON(@IDs) i WHERE i.[Value] = pbl.Config.ID)
+
+			SET @Result = @@ROWCOUNT
+		COMMIT
+
+	END TRY
+	BEGIN CATCH
+		;THROW
+	END CATCH
+
+	RETURN @Result 
+END
