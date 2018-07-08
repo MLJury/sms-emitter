@@ -74,10 +74,6 @@
       <Project>{bc827d6b-34ca-4fe2-b425-89ce2bff333c}</Project>
       <Name>Kama.SmsService.Core.DataSource</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Kama.SmsService.Core.MagfaSms\Kama.SmsService.Core.MagfaSms.csproj">
-      <Project>{0e1930b6-5582-4e7f-a1fe-1c08fc9ebcf5}</Project>
-      <Name>Kama.SmsService.Core.MagfaSms</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Kama.SmsService.Core.Service\Kama.SmsService.Core.Service.csproj">
       <Project>{0a95438e-dc1a-4347-a143-3e5954443a0f}</Project>
       <Name>Kama.SmsService.Core.Service</Name>

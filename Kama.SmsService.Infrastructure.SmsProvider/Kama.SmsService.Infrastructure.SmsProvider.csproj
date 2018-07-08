@@ -60,9 +60,9 @@
     <Compile Include="Web References\SOAPSmsQueue\Reference.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Kama.SmsService.Core.MagfaSms\Kama.SmsService.Core.MagfaSms.csproj">
+    <ProjectReference Include="..\Kama.SmsService.Core.MagfaSms\Kama.SmsService.Core.SmsProvider.csproj">
       <Project>{0e1930b6-5582-4e7f-a1fe-1c08fc9ebcf5}</Project>
-      <Name>Kama.SmsService.Core.MagfaSms</Name>
+      <Name>Kama.SmsService.Core.SmsProvider</Name>
     </ProjectReference>
     <ProjectReference Include="..\Kama.SmsService.Core\Kama.SmsService.Core.csproj">
       <Project>{707bc0d4-f69e-45bd-8c66-ec26c818a54c}</Project>
