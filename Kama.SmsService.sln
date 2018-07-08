@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F7725D81-4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.Infrastructure.DAL", "Kama.SmsService.Infrastructure.DAL\Kama.SmsService.Infrastructure.DAL.csproj", "{B503E4CB-BFCC-4AD9-8AA2-291F789D7CBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.Infrastructure.MagfaSms", "Kama.SmsService.Infrastructure.MagfaSms\Kama.SmsService.Infrastructure.MagfaSms.csproj", "{BCBA2ED6-7622-4AF6-89AF-B828FB8667EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.Infrastructure.SmsProvider", "Kama.SmsService.Infrastructure.MagfaSms\Kama.SmsService.Infrastructure.SmsProvider.csproj", "{BCBA2ED6-7622-4AF6-89AF-B828FB8667EB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9221E39E-081A-4C4B-8EE0-53042FBD3A8E}"
 EndProject
@@ -34,8 +34,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.Api", "Kama.SmsService.Api\Kama.SmsService.Api.csproj", "{DF999FB7-0EDD-4A6A-B1DE-D5299A86B198}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.ApiClinet", "Kama.SmsService.ApiClinet\Kama.SmsService.ApiClinet.csproj", "{E6CE8FFD-D413-4971-94E4-3A31D182B3C1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kama.SmsService.Infrastructure.ArmaghanSms", "Kama.SmsService.Infrastructure.ArmaghanSms\Kama.SmsService.Infrastructure.ArmaghanSms.csproj", "{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,10 +81,6 @@ Global
 		{E6CE8FFD-D413-4971-94E4-3A31D182B3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6CE8FFD-D413-4971-94E4-3A31D182B3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6CE8FFD-D413-4971-94E4-3A31D182B3C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -106,7 +100,6 @@ Global
 		{88B01B1F-C5E7-405A-8654-7AB42CC0E23D} = {F7725D81-4A26-4C8F-A67F-569F9AD68F6C}
 		{DF999FB7-0EDD-4A6A-B1DE-D5299A86B198} = {DB5732CB-FA35-4A31-A476-32615DBCC0B9}
 		{E6CE8FFD-D413-4971-94E4-3A31D182B3C1} = {67614F98-DBC3-478D-ABA8-2999C3525B83}
-		{B1BA7FF0-CE39-475C-AB8B-7AA0C1A9EC87} = {9221E39E-081A-4C4B-8EE0-53042FBD3A8E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {539DA271-7808-43CF-BAF0-59AC85F2FEFE}
