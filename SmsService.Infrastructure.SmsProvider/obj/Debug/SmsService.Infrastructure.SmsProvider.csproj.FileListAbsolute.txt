@@ -1,0 +1,8 @@
+H:\GithubProjects\Kama.SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.SmsProvider.csprojResolveAssemblyReference.cache
+H:\GithubProjects\Kama.SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\Kama.SmsService.Infrastructure.MagfaSms.dll
+H:\GithubProjects\Kama.SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\Kama.SmsService.Infrastructure.MagfaSms.pdb
+H:\GithubProjects\SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.SmsProvider.csprojResolveAssemblyReference.cache
+H:\GithubProjects\SmsService\Kama.SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.dll
+H:\GithubProjects\SmsService\Kama.SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.pdb
+H:\GithubProjects\SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.MagfaSms.dll
+H:\GithubProjects\SmsService\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.MagfaSms.pdb

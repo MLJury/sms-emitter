@@ -1,0 +1,88 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="$(SolutionDir)SmsService.Api\Libs\SmsService.Api.exe" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="SmsService.Api.Controllers" #>
+<#@ output extension=".cs" #>
+<#const string app = "SmsService"; #>
+// App: <#=app#>.Client
+// Developer: Payam Kandi
+// Version: 1.0
+
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using model = SmsService.Core.Model;
+
+
+namespace Kama.<#=app#>.ApiClient.Interface
+{
+	public interface I<#=app#>Client: Library.ApiClient.IClient
+	{
+		string Host{get;}
+	}
+
+	public interface I<#=app#>HostInfo: Library.ApiClient.IHostInfo
+	{
+	}
+
+	/// <summary>
+    /// flag for ioc container registrar
+    /// </summary>
+	public interface IService
+	{
+	}
+
+<#
+string GetTypeName(Type t)
+{
+    var i = t.FullName.IndexOf('`');
+
+    var name = i >= 0 ? t.FullName.Substring(0, i) : t.FullName;
+
+    var generics = string.Empty;
+
+    foreach (var gArgType in t.GetGenericArguments())
+        generics = GetTypeName(gArgType) + ",";
+
+    if (!string.IsNullOrWhiteSpace(generics))
+        name = $"{name}<{generics.TrimEnd(',')}>";
+
+    return name.Replace("System.Threading.Tasks.", "")
+			   .Replace("System.Collections.Generic.", "")
+			   .Replace("System.", "")
+			   .Replace("SmsService.Core.Model.", "model.")
+			   .Replace("AppCore.", "AppCore.");
+}
+
+var baseType = typeof(SmsService.Api.Controllers.BaseApiController);
+
+var apiAsm = System.Reflection.Assembly.GetAssembly(baseType);
+
+var apiControllerTypes = apiAsm.GetTypes().Where(t => t.IsSubclassOf(baseType));
+
+foreach (var apiControllerType in apiControllerTypes)
+{
+    var i = apiControllerType.Name.LastIndexOf("Controller", StringComparison.OrdinalIgnoreCase);
+    var name = i > 0 ? apiControllerType.Name.Substring(0, i) : apiControllerType.Name;
+    var methods = apiControllerType.GetMethods(BindingFlags.DeclaredOnly | BindingFlags.Public | BindingFlags.Instance);
+#>
+	public interface I<#=name#>Service: IService
+	{
+<#foreach (var method in methods){
+var parameters = method.GetParameters();
+var isTask = method.ReturnType.BaseType == typeof(System.Threading.Tasks.Task);
+#>
+<#if(isTask){#>
+		
+		<#=GetTypeName(method.ReturnType)#> <#=method.Name#>(<#for (int pi = 0; pi < parameters.Length; pi++){var prm = parameters[pi];#><#=GetTypeName(prm.ParameterType)#> <#=prm.Name#>,<#}#>IDictionary<string, string> httpHeaders = null);
+<#}else{#>
+		
+		Task<<#=GetTypeName(method.ReturnType)#>> <#=method.Name#>(<#for (int pi = 0; pi < parameters.Length; pi++){var prm = parameters[pi];#><#=GetTypeName(prm.ParameterType)#> <#=prm.Name#>,<#}#>IDictionary<string, string> httpHeaders = null);
+<#}}#>
+	}
+<#}#>
+}

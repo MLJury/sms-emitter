@@ -1,0 +1,19 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="$(SolutionDir)SmsService.Api\Libs\DatabaseModel.dll" #>
+<#@ assembly name="$(SolutionDir)SmsService.Api\Libs\SmsService.Core.Model.dll" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="DatabaseModel" #>
+<#@ import namespace="SmsService.Core" #>
+<#@ output extension=".cs" #>
+<#
+	string dataSource = "46.225.116.210",
+		   database = "SmsService",
+		   username = "kama",
+		   password = "Kama123qwe!@#";
+
+	var generator = new DatabaseModel.Generator($"Data Source={dataSource};Initial Catalog={database};User ID={username}; Password={password}", "dbo");
+#>
+<#=generator.Generate("SmsService.Infrastructure.DAL")#>

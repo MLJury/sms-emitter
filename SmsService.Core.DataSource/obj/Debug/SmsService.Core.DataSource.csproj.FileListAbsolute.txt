@@ -1,0 +1,7 @@
+H:\GithubProjects\Kama.SmsService\SmsService.Core.DataSource\obj\Debug\Kama.SmsService.Core.DataSource.dll
+H:\GithubProjects\Kama.SmsService\SmsService.Core.DataSource\obj\Debug\Kama.SmsService.Core.DataSource.pdb
+H:\GithubProjects\SmsService\SmsService.Core.DataSource\obj\Debug\SmsService.Core.DataSource.csprojResolveAssemblyReference.cache
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Core.DataSource.dll
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Core.DataSource.pdb
+H:\GithubProjects\SmsService\SmsService.Core.DataSource\obj\Debug\SmsService.Core.DataSource.dll
+H:\GithubProjects\SmsService\SmsService.Core.DataSource\obj\Debug\SmsService.Core.DataSource.pdb
