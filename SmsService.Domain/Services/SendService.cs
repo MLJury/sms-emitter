@@ -13,6 +13,9 @@ using AppCore.EventLogger;
 
 namespace SmsService.Domain
 {
+    /// <summary>
+    /// Core service for sending queued messages 
+    /// </summary>
     class SendService : Service, svc.ISendService
     {
         public SendService(AppCore.IOC.IContainer container
@@ -110,11 +113,23 @@ namespace SmsService.Domain
             return AppCore.Result.Successful();
         }
 
+
+        /// <summary>
+        /// Loops till message queue become empty then stop looping
+        /// </summary>
+        /// <returns></returns>
         public async Task<AppCore.Result> ProcessAsync()
         {
+            /*check if current priority is empty or not if is empty
+             * then swich to other priorities, 
+             * if all priorities all empty then set Running to false
+            */
             if (_queueService.QueueCount(QueueHelper.Instance.CurrentPriority).Equals(0))
                 QueueHelper.Instance.Next(_queueService);
 
+            /*
+             * Loop While queue message become empty
+             */
             while (QueueHelper.Instance.Running)
             {
                 Library.Queue.ITransaction<QueueItem> qResult = null;
@@ -150,11 +165,17 @@ namespace SmsService.Domain
             return AppCore.Result.Successful();
         }
 
+        /*
+         * Time works with specific interval values wich is 5 seconds by default  
+         * and get all unqueued messages from database each time and enqueue them in 
+         * Message Queue
+         * interval value can be setted up in app.config => AutomationTimerInterval
+         */
         public void DoOnMainTimer(object sender, ElapsedEventArgs e)
         {
             var unQueueRecList = _messageDataSource.ListUnQueueReceiverAsync(Guid.Empty).GetAwaiter().GetResult();
 
-            if (unQueueRecList.Data.Count() > 0)
+            if (unQueueRecList.Data.Any())
             {
                 var setQueueResult = _messageDataSource.SetQueueAsync(unQueueRecList.Data.ToList(), true);
                 if (setQueueResult.GetAwaiter().GetResult().Success)

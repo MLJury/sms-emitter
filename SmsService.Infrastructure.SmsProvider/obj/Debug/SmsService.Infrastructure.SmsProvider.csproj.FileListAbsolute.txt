@@ -11,3 +11,5 @@ D:\GitHubProjects\SmsEmmiter\Kama.SmsService.Api\Libs\SmsService.Infrastructure.
 D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.SmsProvider.csprojResolveAssemblyReference.cache
 D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.MagfaSms.dll
 D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.MagfaSms.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.pdb
