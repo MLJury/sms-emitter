@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 namespace SmsService
 {
     [RunInstaller(true)]
-    public partial class KamaSmsService : System.Configuration.Install.Installer
+    public partial class SmsService : System.Configuration.Install.Installer
     {
-        public KamaSmsService()
+        public SmsService()
         {
             InitializeComponent();
         }

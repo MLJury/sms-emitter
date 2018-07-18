@@ -1,6 +1,6 @@
 ﻿namespace SmsService
 {
-    partial class KamaSmsService
+    partial class SmsService
     {
         /// <summary>
         /// Required designer variable.
@@ -28,31 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.KamaSmsServiceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
-            this.KamaSmsServiceInstaller = new System.ServiceProcess.ServiceInstaller();
+            this.SmsServiceProcessInstaller1 = new System.ServiceProcess.ServiceProcessInstaller();
+            this.SmsServiceInstaller = new System.ServiceProcess.ServiceInstaller();
             // 
-            // KamaMailServiceProcessInstaller1
             // 
-            this.KamaSmsServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
-            this.KamaSmsServiceProcessInstaller1.Password = null;
-            this.KamaSmsServiceProcessInstaller1.Username = null;
+            this.SmsServiceProcessInstaller1.Account = System.ServiceProcess.ServiceAccount.LocalService;
+            this.SmsServiceProcessInstaller1.Password = null;
+            this.SmsServiceProcessInstaller1.Username = null;
             // 
-            // KamaMailServiceInstaller
+            // MailServiceInstaller
             // 
-            this.KamaSmsServiceInstaller.DisplayName = "KamaSmsService";
-            this.KamaSmsServiceInstaller.ServiceName = "KamaSmsService";
+            this.SmsServiceInstaller.DisplayName = "SmsService";
+            this.SmsServiceInstaller.ServiceName = "SmsService";
             // 
-            // KamaMailService
+            // MailService
             // 
             this.Installers.AddRange(new System.Configuration.Install.Installer[] {
-            this.KamaSmsServiceProcessInstaller1,
-            this.KamaSmsServiceInstaller});
+            this.SmsServiceProcessInstaller1,
+            this.SmsServiceInstaller});
 
         }
 
         #endregion
 
-        private System.ServiceProcess.ServiceProcessInstaller KamaSmsServiceProcessInstaller1;
-        private System.ServiceProcess.ServiceInstaller KamaSmsServiceInstaller;
+        private System.ServiceProcess.ServiceProcessInstaller SmsServiceProcessInstaller1;
+        private System.ServiceProcess.ServiceInstaller SmsServiceInstaller;
     }
 }

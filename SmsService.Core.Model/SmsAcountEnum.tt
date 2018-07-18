@@ -10,7 +10,7 @@
 <#@ output extension=".cs" #>
 <#
             Guid AzmoonID = Guid.Parse("2AC51699-9656-4060-B632-B85E4AF705BA");
-            string connectionString = "Data Source=46.225.116.210;Initial Catalog=SmsService;User ID=sa; Password=Kama123qwe!@#";
+            string connectionString = "Data Source=46.225.116.210;Initial Catalog=Kama.SmsService;User ID=kama; Password=Kama123qwe!@#";
             SqlDataReader rdr = null;
             List<Tuple<Guid, string>> CommandNameAndIDs = new List<Tuple<Guid, string>>();
             using (SqlConnection conn = new SqlConnection(connectionString))

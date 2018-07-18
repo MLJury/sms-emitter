@@ -11,7 +11,7 @@ using Config = System.Configuration.ConfigurationManager;
 using System.Linq;
 using System.Threading;
 using System.Web.Http.ExceptionHandling;
-using Kama.Mefa.Azmoon.API.Auth.Filters;
+using API.Auth.Filters;
 using API.Exceptions.Filters;
 using Library.Queue;
 using SmsService.Domain;
@@ -53,16 +53,14 @@ namespace SmsService.Api
         {
             //regsiter Filters
             container.RegisterType(typeof(ValidationFilter));
-            container.RegisterType(typeof(KamaExceptionHandler));
-            container.RegisterType(typeof(KamaExceptionLogger));
+            container.RegisterType(typeof(API.Exceptions.Filters.ExceptionHandler));
+            container.RegisterType(typeof(API.Exceptions.Filters.ExceptionLogger));
 
 
             //register command filters in httConfig
             httpConfig.Filters.Add(container.Resolve<ValidationFilter>());
-            //httpConfig.Filters.Add(container.Resolve<KamaExceptionHandler>());
             //Register Exception Loggers and Exception Handler
-            //httpConfig.Services.Replace(typeof(IExceptionHandler), container.Resolve<KamaExceptionHandler>());
-            httpConfig.Services.Replace(typeof(IExceptionLogger), container.Resolve<KamaExceptionLogger>());
+            httpConfig.Services.Replace(typeof(IExceptionLogger), container.Resolve<API.Exceptions.Filters.ExceptionLogger>());
         }
     }
 }

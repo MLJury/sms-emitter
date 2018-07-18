@@ -9,9 +9,9 @@ namespace API.Exceptions.Filters
 {
 
     //global Logger
-    public class KamaExceptionLogger : IExceptionLogger
+    public class ExceptionLogger : IExceptionLogger
     {
-        public KamaExceptionLogger(IEventLogger logger)
+        public ExceptionLogger(IEventLogger logger)
             => _logger = logger;
 
         protected readonly IEventLogger _logger;

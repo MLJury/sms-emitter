@@ -11,10 +11,10 @@ using System.Threading;
 using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Net;
-using Kama.Mefa.Azmoon.API.Auth;
+using API.Auth;
 using SmsService.Api.Attributes;
 
-namespace Kama.Mefa.Azmoon.API.Auth.Filters
+namespace API.Auth.Filters
 {
     public class ValidationFilter : IActionFilter
     {

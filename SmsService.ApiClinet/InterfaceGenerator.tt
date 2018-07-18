@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 using model = SmsService.Core.Model;
 
 
-namespace Kama.<#=app#>.ApiClient.Interface
+namespace <#=app#>.ApiClient.Interface
 {
 	public interface I<#=app#>Client: Library.ApiClient.IClient
 	{

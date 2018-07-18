@@ -18,7 +18,7 @@ namespace SmsService
     {
         public Service()
         {
-            ServiceName = "KamaSmsService";
+            ServiceName = "SmsService";
         }
 
         private string title => $"______________{ServiceName}______________";

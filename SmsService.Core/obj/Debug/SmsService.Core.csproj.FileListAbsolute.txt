@@ -6,3 +6,8 @@ H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Core.dll
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Core.pdb
 H:\GithubProjects\SmsService\SmsService.Core\obj\Debug\SmsService.Core.dll
 H:\GithubProjects\SmsService\SmsService.Core\obj\Debug\SmsService.Core.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Core.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Core.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Core\obj\Debug\SmsService.Core.csprojResolveAssemblyReference.cache
+D:\GitHubProjects\SmsEmmiter\SmsService.Core\obj\Debug\SmsService.Core.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Core\obj\Debug\SmsService.Core.pdb

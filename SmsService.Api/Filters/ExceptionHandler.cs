@@ -10,7 +10,7 @@ using System.Net.Http.Headers;
 namespace API.Exceptions.Filters
 {
     //A global exception handler that will be used to catch any error
-    public class KamaExceptionHandler : IExceptionFilter
+    public class ExceptionHandler : IExceptionFilter
     {
         public Task ExecuteExceptionFilterAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
         {

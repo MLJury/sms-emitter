@@ -11,7 +11,7 @@ namespace SmsService
 {
     class Program
     {
-        const string title = "_________ Kama SmsService _______________";
+        const string title = "_________ SmsService _______________";
         static void Main(string[] args)
         {
             try
