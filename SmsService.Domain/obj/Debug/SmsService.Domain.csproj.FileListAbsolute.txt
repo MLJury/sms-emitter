@@ -8,3 +8,8 @@ H:\GithubProjects\SmsService\SmsService.Domain\obj\Debug\SmsService.Domain.dll
 H:\GithubProjects\SmsService\SmsService.Domain\obj\Debug\SmsService.Domain.pdb
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Domain.dll
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Domain.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Domain\obj\Debug\SmsService.Domain.csprojResolveAssemblyReference.cache
+D:\GitHubProjects\SmsEmmiter\SmsService.Domain\obj\Debug\SmsService.Domain.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Domain\obj\Debug\SmsService.Domain.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Domain.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Domain.pdb

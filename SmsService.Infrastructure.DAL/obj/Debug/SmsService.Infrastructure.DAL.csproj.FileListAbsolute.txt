@@ -6,3 +6,8 @@ H:\GithubProjects\SmsService\Kama.SmsService.Api\Libs\SmsService.Infrastructure.
 H:\GithubProjects\SmsService\Kama.SmsService.Api\Libs\SmsService.Infrastructure.DAL.pdb
 H:\GithubProjects\SmsService\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.dll
 H:\GithubProjects\SmsService\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.pdb
+D:\GitHubProjects\SmsEmmiter\Kama.SmsService.Api\Libs\SmsService.Infrastructure.DAL.dll
+D:\GitHubProjects\SmsEmmiter\Kama.SmsService.Api\Libs\SmsService.Infrastructure.DAL.pdb
+D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.csprojResolveAssemblyReference.cache
+D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.dll
+D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.pdb
