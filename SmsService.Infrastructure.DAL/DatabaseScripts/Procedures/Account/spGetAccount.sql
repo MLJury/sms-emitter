@@ -1,4 +1,4 @@
-USE [Kama.SmsService]
+USE [SMSService]
 GO
 
 IF OBJECT_ID('pbl.spGetAccount') IS NOT NULL

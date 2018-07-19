@@ -1,4 +1,4 @@
-USE [SmsService]
+USE [SMSService]
 GO
 
 IF EXISTS(SELECT 1 FROM sys.procedures WHERE [object_id] = OBJECT_ID('pbl.spGetAccountsForEnum_'))

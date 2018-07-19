@@ -1,4 +1,4 @@
-USE [SmsService]
+USE [SMSService]
 GO
 
 IF OBJECT_ID('pbl.spSetConfig') IS NOT NULL

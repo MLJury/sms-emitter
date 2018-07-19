@@ -1,4 +1,4 @@
-USE [SmsService]
+USE [SMSService]
 GO
 
 IF OBJECT_ID('msg.spDeleteMessage') IS NOT NULL

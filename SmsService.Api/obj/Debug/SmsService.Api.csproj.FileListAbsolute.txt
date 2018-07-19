@@ -5,7 +5,6 @@ H:\GithubProjects\Kama.SmsService\SmsService.Api\obj\Debug\Kama.SmsService.Api.e
 H:\GithubProjects\Kama.SmsService\SmsService.Api\obj\Debug\Kama.SmsService.Api.pdb
 H:\GithubProjects\SmsService\SmsService.Api\obj\Debug\SmsService.Api.csprojResolveAssemblyReference.cache
 H:\GithubProjects\SmsService\SmsService.Api\obj\Debug\SmsService.Api.csproj.GenerateResource.Cache
-H:\GithubProjects\SmsService\SmsService.Api\obj\Debug\SmsService.KamaSmsService.resources
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Api.exe.config
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Api.exe
 H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Api.pdb
@@ -73,3 +72,4 @@ D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\System.Web.Http.xml
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\System.Web.Http.Owin.xml
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Core.DataSource.pdb
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Core.SmsProvider.pdb
+H:\GithubProjects\SmsService\SmsService.Api\obj\Debug\SmsService.SmsService.resources
