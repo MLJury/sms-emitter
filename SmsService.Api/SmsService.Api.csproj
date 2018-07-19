@@ -149,6 +149,8 @@
     <Content Include="Libs\AppCore.pdb" />
     <Content Include="Libs\DatabaseModel.dll" />
     <Content Include="Libs\DatabaseModel.pdb" />
+    <Content Include="Libs\Library.ApiClient.dll" />
+    <Content Include="Libs\Library.ApiClient.pdb" />
     <Content Include="Libs\Library.Queue.dll" />
     <Content Include="Libs\Library.Queue.pdb" />
   </ItemGroup>

@@ -30,19 +30,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kama.AppCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Kama.SmsService.Api\Libs\Kama.AppCore.dll</HintPath>
-    </Reference>
-    <Reference Include="Kama.Library.ApiClient">
-      <HintPath>..\Kama.SmsService.Api\Libs\Kama.Library.ApiClient.dll</HintPath>
+    <Reference Include="AppCore">
+      <HintPath>..\SmsService.Api\Libs\AppCore.dll</HintPath>
     </Reference>
     <Reference Include="Kama.SmsService.Core.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Kama.SmsService.Api\Libs\Kama.SmsService.Core.Model.dll</HintPath>
     </Reference>
+    <Reference Include="Library.ApiClient">
+      <HintPath>..\SmsService.Api\Libs\Library.ApiClient.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SmsService.Core.Model">
+      <HintPath>..\SmsService.Api\Libs\SmsService.Core.Model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
