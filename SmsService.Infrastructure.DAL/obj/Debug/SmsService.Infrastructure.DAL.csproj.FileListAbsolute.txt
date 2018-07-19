@@ -13,3 +13,5 @@ D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.DAL\obj\Debug\SmsService.
 D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.DAL\obj\Debug\SmsService.Infrastructure.DAL.pdb
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.DAL.dll
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.DAL.pdb
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Infrastructure.DAL.dll
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Infrastructure.DAL.pdb

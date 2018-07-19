@@ -10,11 +10,7 @@ namespace SmsService.Core.DataSource
 
         Task<AppCore.Result> CreateAsync(Model.Message[] model);
 
-        Task<AppCore.Result> DeleteAsync(IEnumerable<Guid> ids);
-
         Task<AppCore.Result<IEnumerable<Model.Message>>> ListAsync(Guid sourceAccountID, Core.Model.Status? status = null, string receiverNumber = null, DateTime? sendDateFrom = null, DateTime? sendDateTo = null);
-
-        Task<AppCore.Result<IEnumerable<Model.Message>>> ListUnSentAsync(Guid sourceAccountID, Core.Model.Status? status = null, string receiverNumber = null, DateTime? sendDateFrom = null, DateTime? sendDateTo = null);
 
         Task<AppCore.Result<IEnumerable<Model.MessageReceiver>>> ListUnQueueReceiverAsync(Guid sourceAccountID, Core.Model.Status? status = null, string receiverNumber = null, DateTime? sendDateFrom = null, DateTime? sendDateTo = null);
 

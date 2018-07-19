@@ -56,21 +56,6 @@ namespace SmsService.Infrastructure.DAL
             }
         }
 
-        public async Task<AppCore.Result> DeleteAsync(IEnumerable<Guid> ids)
-        {
-            try
-            {
-                var result = (await _dbMessage.DeleteOutgoingMessageAsync(_iDS: $"[{string.Join(",", ids.ToArray())}]"))
-                        .ToActionResult();
-
-                return result;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
         public async Task<AppCore.Result<IEnumerable<Model.Message>>> ListAsync(Guid sourceAccountID, Core.Model.Status? status = null, string receiverNumber = null, DateTime? sendDateFrom = null, DateTime? sendDateTo = null)
         {
             try
@@ -81,21 +66,6 @@ namespace SmsService.Infrastructure.DAL
 
                 var result = (await _dbMessage.GetMessagesAsync(_sourceAccountID: sourceAccountID, _status: xStatus, _receiverNumber: string.IsNullOrWhiteSpace(receiverNumber) ? null : receiverNumber, _sendDateFrom: sendDateFrom, _sendDateTo: sendDateTo))
                         .ToListActionResult<Model.Message>();
-                return result;
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-        }
-
-        public async Task<AppCore.Result<IEnumerable<Model.Message>>> ListUnSentAsync(Guid sourceAccountID, Core.Model.Status? status = null, string receiverNumber = null, DateTime? sendDateFrom = null, DateTime? sendDateTo = null)
-        {
-            try
-            {
-                var result = (await _dbMessage.GetUnQueueMessagesAsync())
-                        .ToListActionResult<Model.Message>();
-
                 return result;
             }
             catch (Exception e)

@@ -13,3 +13,5 @@ D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.SmsProvider\obj\Debug\Sms
 D:\GitHubProjects\SmsEmmiter\SmsService.Infrastructure.SmsProvider\obj\Debug\SmsService.Infrastructure.MagfaSms.pdb
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.dll
 D:\GitHubProjects\SmsEmmiter\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.pdb
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.dll
+H:\GithubProjects\SmsService\SmsService.Api\Libs\SmsService.Infrastructure.MagfaSms.pdb
