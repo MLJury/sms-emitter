@@ -22,6 +22,37 @@ GO
 ALTER DATABASE SMSService
 ADD FILEGROUP fgIndexes
 GO
+
+/*****mama ********/
+ALTER DATABASE SMSService
+ADD FILE (
+	NAME = SmsService_CLOB
+	, FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\SmsService_CLOB.ndf'
+	, SIZE = 6MB
+	, MAXSIZE = Unlimited 
+	, FILEGROWTH = 1
+)
+TO FILEGROUP fgCLOB
+
+ALTER DATABASE SMSService
+ADD FILE (
+	NAME = SmsService_Data
+	, FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\SmsService_Data.ndf'
+	, SIZE = 6MB
+	, MAXSIZE = Unlimited 
+	, FILEGROWTH = 1
+)
+TO FILEGROUP fgData
+
+ALTER DATABASE SMSService
+ADD FILE (
+	NAME = SmsService_Indexes
+	, FILENAME = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\SmsService_Indexes.ndf'
+	, SIZE = 6MB
+	, MAXSIZE = Unlimited 
+	, FILEGROWTH = 1
+)
+TO FILEGROUP fgIndexes	
 /****** Object:  Table [msg].[Message]    Script Date: 7/18/2018 11:18:16 PM ******/
 SET ANSI_NULLS ON
 GO
