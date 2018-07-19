@@ -33,6 +33,7 @@ ADD FILE (
 	, FILEGROWTH = 1
 )
 TO FILEGROUP fgCLOB
+GO
 
 ALTER DATABASE SMSService
 ADD FILE (
@@ -43,6 +44,7 @@ ADD FILE (
 	, FILEGROWTH = 1
 )
 TO FILEGROUP fgData
+GO
 
 ALTER DATABASE SMSService
 ADD FILE (
@@ -53,6 +55,7 @@ ADD FILE (
 	, FILEGROWTH = 1
 )
 TO FILEGROUP fgIndexes	
+GO
 /****** Object:  Table [msg].[Message]    Script Date: 7/18/2018 11:18:16 PM ******/
 SET ANSI_NULLS ON
 GO
