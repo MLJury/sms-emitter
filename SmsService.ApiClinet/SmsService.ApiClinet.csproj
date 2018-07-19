@@ -7,8 +7,8 @@
     <ProjectGuid>{E6CE8FFD-D413-4971-94E4-3A31D182B3C1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Kama.SmsService.ApiClinet</RootNamespace>
-    <AssemblyName>Kama.SmsService.ApiClinet</AssemblyName>
+    <RootNamespace>SmsService.ApiClinet</RootNamespace>
+    <AssemblyName>SmsService.ApiClinet</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
